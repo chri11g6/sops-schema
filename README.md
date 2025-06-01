@@ -35,6 +35,20 @@ creation_rules:
       - pgp: "your-key-id"
 ```
 
+#### 1.1 VSCode Settings for YAML Schema Integration
+
+To enable schema validation in VSCode using the [YAML extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml), add the following to your workspace or user settings:
+
+```json
+{
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/chri11g6/sops-schema/refs/heads/master/sops.schema.json": [
+      ".sops.yaml"
+    ]
+  }
+}
+```
+
 ### 2. Validate using CLI tools (optional)
 
 Use JSON/YAML schema validation tools like:
